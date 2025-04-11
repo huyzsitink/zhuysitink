@@ -60,7 +60,7 @@ local function createKeySystemUI()
 	Shadow.Position = UDim2.new(0.5, 0, 0.5, 0)
 	Shadow.Size = UDim2.new(1, 40, 1, 40)
 	Shadow.ZIndex = -1
-	Shadow.Image = "rbxassetid://5028857084"
+	Shadow.Image = "rbxassetid://117143489315073"
 	Shadow.ImageColor3 = Color3.fromRGB(0, 0, 0)
 	Shadow.ImageTransparency = 0.5
 	Shadow.Parent = MainFrame
@@ -264,7 +264,7 @@ local function runKeySystem()
 				
 				-- Kick the player after a delay
 				wait(3)
-				Player:Kick("Too many invalid key attempts")
+				Player:Kick("⚙️KuroKamiX Kick Spam Key⚙️")
 			else
 				StatusLabel.Text = "Invalid key! Attempts remaining: " .. attempts
 				StatusLabel.TextColor3 = Color3.fromRGB(255, 100, 100)
@@ -349,3 +349,4 @@ end
 -- Run the key system
 runKeySystem()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/huyzsitink/zhuysitink/refs/heads/main/Mobile/MainMobile/Bloxfruits/VietNam/KyroZenXHub.lua"))()
+end
