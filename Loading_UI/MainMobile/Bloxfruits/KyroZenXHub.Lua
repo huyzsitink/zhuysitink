@@ -347,7 +347,7 @@ local function runKeySystem()
 end
 
 -- Run the key system
-runKeySystem()
+runKeySystem(true)
 --https://discord.gg/zG67HXbR
 
 
