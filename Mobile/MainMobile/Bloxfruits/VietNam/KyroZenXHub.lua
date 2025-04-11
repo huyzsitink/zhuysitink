@@ -349,4 +349,3 @@ end
 -- Run the key system
 runKeySystem()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/huyzsitink/zhuysitink/refs/heads/main/Mobile/MainMobile/Bloxfruits/VietNam/KyroZenXHub.lua"))()
-end
