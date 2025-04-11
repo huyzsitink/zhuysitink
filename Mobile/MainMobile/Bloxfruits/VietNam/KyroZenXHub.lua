@@ -348,7 +348,16 @@ end
 
 -- Run the key system
 runKeySystem()
-getgenv().Key = "MARU-LN0PU-WM7Z7-VJ4N-8QG22-SFG2L"
-getgenv().id = "1291987571995443270"
-_G.Script_Language = "Thai"
-loadstring(game:HttpGet("https://raw.githubusercontent.com/xshiba/MaruBitkub/main/Mobile.lua"))()
+print("Break");
+local v0 = require(game:GetService("ReplicatedStorage").Notification);
+v0.new("<Color=Cyan>Vietnam<Color=/>"):Display();
+wait(0.5);
+v0.new("<Color=Yellow>KuroKamiX One Top!<Color=/>"):Display();
+wait(1);
+repeat
+    wait();
+until game.Players.LocalPlayer
+if  not game:IsLoaded() then
+    game.Loaded:Wait();
+end
+loadstring(game:HttpGet("https://raw.githubusercontent.com/huyzsitink/zhuysitink/refs/heads/main/Loading_UI/MainMobile/Bloxfruits/KyroZenXHub.Lua"))() 
