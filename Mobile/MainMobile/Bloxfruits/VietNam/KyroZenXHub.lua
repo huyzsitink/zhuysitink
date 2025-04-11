@@ -1,14 +1,9 @@
--- Roblox Key System UI Script
--- This script creates a user interface for a key system in Roblox
-
--- Setup variables and services
 local Players = game:GetService("Players")
 local Player = Players.LocalPlayer
 local PlayerGui = Player:WaitForChild("PlayerGui")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local TweenService = game:GetService("TweenService")
 
--- Configuration
 local CONFIG = {
 	KEYS = {
 		"5axc85291z8k5b62j5012a55f", -- Add more keys as needed
@@ -19,8 +14,6 @@ local CONFIG = {
 	REMOTE_EVENT_NAME = "ValidateKey" -- Change this to match your RemoteEvent name
 }
 
--- Create RemoteEvent if it doesn't exist (for testing purposes)
--- In a real game, this should be created on the server
 local ValidateKeyEvent = ReplicatedStorage:FindFirstChild(CONFIG.REMOTE_EVENT_NAME)
 if not ValidateKeyEvent then
 	ValidateKeyEvent = Instance.new("RemoteEvent")
@@ -28,16 +21,15 @@ if not ValidateKeyEvent then
 	ValidateKeyEvent.Parent = ReplicatedStorage
 end
 
--- Create the UI
 local function createKeySystemUI()
-	-- Create ScreenGui
+	
 	local KeySystemGui = Instance.new("ScreenGui")
 	KeySystemGui.Name = "KeySystemGui"
 	KeySystemGui.ResetOnSpawn = false
 	KeySystemGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 	KeySystemGui.Parent = PlayerGui
 	
-	-- Create main frame
+
 	local MainFrame = Instance.new("Frame")
 	MainFrame.Name = "MainFrame"
 	MainFrame.Size = UDim2.new(0, 400, 0, 250)
@@ -47,12 +39,12 @@ local function createKeySystemUI()
 	MainFrame.ClipsDescendants = true
 	MainFrame.Parent = KeySystemGui
 	
-	-- Add corner radius
+	
 	local UICorner = Instance.new("UICorner")
 	UICorner.CornerRadius = UDim.new(0, 8)
 	UICorner.Parent = MainFrame
 	
-	-- Add shadow
+	
 	local Shadow = Instance.new("ImageLabel")
 	Shadow.Name = "Shadow"
 	Shadow.AnchorPoint = Vector2.new(0.5, 0.5)
@@ -60,12 +52,12 @@ local function createKeySystemUI()
 	Shadow.Position = UDim2.new(0.5, 0, 0.5, 0)
 	Shadow.Size = UDim2.new(1, 40, 1, 40)
 	Shadow.ZIndex = -1
-	Shadow.Image = "rbxassetid://117143489315073"
+	Shadow.Image = "rbxassetid://5028857084"
 	Shadow.ImageColor3 = Color3.fromRGB(0, 0, 0)
 	Shadow.ImageTransparency = 0.5
 	Shadow.Parent = MainFrame
 	
-	-- Create title
+	
 	local TitleLabel = Instance.new("TextLabel")
 	TitleLabel.Name = "TitleLabel"
 	TitleLabel.Size = UDim2.new(1, 0, 0, 40)
@@ -77,7 +69,7 @@ local function createKeySystemUI()
 	TitleLabel.TextSize = 24
 	TitleLabel.Parent = MainFrame
 	
-	-- Create subtitle
+	
 	local SubtitleLabel = Instance.new("TextLabel")
 	SubtitleLabel.Name = "SubtitleLabel"
 	SubtitleLabel.Size = UDim2.new(1, 0, 0, 20)
@@ -89,7 +81,7 @@ local function createKeySystemUI()
 	SubtitleLabel.TextSize = 14
 	SubtitleLabel.Parent = MainFrame
 	
-	-- Create key input box
+	
 	local KeyInput = Instance.new("TextBox")
 	KeyInput.Name = "KeyInput"
 	KeyInput.Size = UDim2.new(0.8, 0, 0, 40)
